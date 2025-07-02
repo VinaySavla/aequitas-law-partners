@@ -1,33 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aequitas Law Partners Website
 
-## Getting Started
+A professional law firm website built with Next.js 15, featuring a premium design with conservative styling appropriate for legal services.
 
-First, run the development server:
+## 🏛️ Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Aequitas Law Partners is a sophisticated law firm website that embodies professionalism, trust, and legal excellence. The site features a comprehensive set of pages designed to showcase the firm's expertise and facilitate client engagement.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design Philosophy
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Color Palette**: Premium & Conservative
+  - Black (#000000) - Primary text and navigation
+  - Ivory (#FFFFF0) - Background and light elements  
+  - Bronze (#CD7F32) - Accent colors and highlights
+- **Typography**: Clean, professional fonts suitable for legal content
+- **Layout**: Conservative, structured, and easy to navigate
+- **Accessibility**: Semantic HTML and responsive design principles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Technology Stack
 
-## Learn More
+- **Framework**: Next.js 15 with App Router
+- **Language**: JavaScript (no TypeScript)
+- **Styling**: Tailwind CSS v4
+- **Development**: Turbopack for fast builds
+- **Linting**: No ESLint configuration (as requested)
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation & Development
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Start development server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+4. **Start production server:**
+   ```bash
+   npm start
+   ```
+
+The development server runs on [http://localhost:3000](http://localhost:3000)
 
 ## Deploy on Vercel
 

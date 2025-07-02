@@ -1,26 +1,236 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FEFCF8; /* Sophisticated cream */
+  --foreground: #1A1F2E; /* Deep navy for text */
+  --accent: #D4AF37; /* Luxurious gold */
+  --primary: #1A1F2E; /* Navy primary */
+  --secondary: #2C3E50; /* Sophisticated slate */
+  --light-gray: #F8F9FA; /* Premium light gray */
+  --medium-gray: #6C757D; /* Professional medium gray */
+  --gold: #D4AF37; /* Premium gold accent */
+  --dark-gold: #B8860B; /* Rich dark gold */
+  --navy: #1A1F2E; /* Authoritative navy */
+  --slate: #2C3E50; /* Professional slate */
+  --cream: #FEFCF8; /* Warm cream background */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Custom utility classes for our color palette */
+.bg-cream { background-color: #FEFCF8; }
+.bg-navy { background-color: #1A1F2E; }
+.bg-slate { background-color: #2C3E50; }
+.bg-gold { background-color: #D4AF37; }
+.bg-dark-gold { background-color: #B8860B; }
+.bg-light-gray { background-color: #F8F9FA; }
+.bg-medium-gray { background-color: #6C757D; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+.text-cream { color: #FEFCF8; }
+.text-navy { color: #1A1F2E; }
+.text-slate { color: #2C3E50; }
+.text-gold { color: #D4AF37; }
+.text-dark-gold { color: #B8860B; }
+.text-light-gray { color: #F8F9FA; }
+.text-medium-gray { color: #6C757D; }
+
+.border-cream { border-color: #FEFCF8; }
+.border-navy { border-color: #1A1F2E; }
+.border-slate { border-color: #2C3E50; }
+.border-gold { border-color: #D4AF37; }
+.border-dark-gold { border-color: #B8860B; }
+.border-light-gray { border-color: #F8F9FA; }
+.border-medium-gray { border-color: #6C757D; }
+
+/* Opacity variants */
+.text-cream\/90 { color: rgba(254, 252, 248, 0.9); }
+.text-cream\/80 { color: rgba(254, 252, 248, 0.8); }
+.text-cream\/70 { color: rgba(254, 252, 248, 0.7); }
+.text-navy\/90 { color: rgba(26, 31, 46, 0.9); }
+.text-navy\/80 { color: rgba(26, 31, 46, 0.8); }
+.text-navy\/70 { color: rgba(26, 31, 46, 0.7); }
+.text-gold\/90 { color: rgba(212, 175, 55, 0.9); }
+.text-gold\/80 { color: rgba(212, 175, 55, 0.8); }
+.text-gold\/70 { color: rgba(212, 175, 55, 0.7); }
+
+/* Background opacity variants */
+.bg-navy\/95 { background-color: rgba(26, 31, 46, 0.95); }
+.bg-slate\/30 { background-color: rgba(44, 62, 80, 0.3); }
+.bg-gold\/10 { background-color: rgba(212, 175, 55, 0.1); }
+.bg-gold\/20 { background-color: rgba(212, 175, 55, 0.2); }
+
+/* Border opacity variants */
+.border-gold\/20 { border-color: rgba(212, 175, 55, 0.2); }
+.border-gold\/30 { border-color: rgba(212, 175, 55, 0.3); }
+.border-gold\/50 { border-color: rgba(212, 175, 55, 0.5); }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* Professional scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* Additional gradient and visibility utilities */
+.gradient-navy-to-slate {
+  background: linear-gradient(135deg, #1A1F2E 0%, #2C3E50 100%);
+}
+
+.gradient-gold-accent {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+}
+
+/* Ensure text visibility with better contrast */
+.text-contrast-high { 
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+}
+
+.bg-overlay-dark {
+  background: rgba(26, 31, 46, 0.9);
+}
+
+.bg-overlay-light {
+  background: rgba(254, 252, 248, 0.9);
+}
+
+/* Enhanced button styles */
+.btn-premium {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Professional card styling */
+.card-premium {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Form styling */
+.form-input {
+  background-color: #ffffff;
+  border: 2px solid #6C757D;
+  color: #1A1F2E;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+  outline: none;
+}
+
+.form-label {
+  color: #1A1F2E;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Button styles */
+.btn-gold {
+  background-color: #D4AF37;
+  color: #1A1F2E;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.btn-gold:hover {
+  background-color: #B8860B;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .btn-responsive {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-title {
+    font-size: 3.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile-first container spacing */
+.container-responsive {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Touch-friendly interactions for mobile */
+@media (max-width: 768px) {
+  .btn-premium,
+  .btn-gold {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .form-input {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
 }
