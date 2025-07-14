@@ -38,7 +38,8 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-              /*<div className="mt-8 lg:mt-0">
+  {/*
+              <div className="mt-8 lg:mt-0">
                 <div className="bg-slate/30 rounded-lg p-6 sm:p-8 backdrop-blur-sm border border-gold/20">
                   <div className="space-y-4 sm:space-y-6">
                     <div className="flex items-center justify-between">
@@ -60,7 +61,8 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div> */
+              </div> 
+              */}
             </div>
           </div>
         </section>
